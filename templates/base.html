@@ -33,10 +33,69 @@
     {% endblock %}
 
     <title>Console Chase {% block extra_title %}{% endblock %}</title>
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/?size=256&id=M8TEqSb6Fzi0&format=png">
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header>
-
+    <header class="container-fluid fixed-top bg-primary text-light py-3">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-4 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="navbar-brand">
+                    <h2 class="logo-font text-light my-0"><strong>Boutique</strong> Ado</h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-3 my-lg-0">
+                <form method="GET" action="" class="input-group">
+                    <input class="form-control border-0 bg-light text-dark" type="text" name="q" placeholder="Search our site">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-light rounded-0" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-right">
+                <ul class="list-inline list-unstyled my-0">
+                    <li class="list-inline-item dropdown">
+                        <a class="text-light nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="" class="dropdown-item text-light">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item text-light">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item text-light">Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item text-light">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item text-light">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-warning font-weight-bold{% else %}text-light{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
