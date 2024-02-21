@@ -1,0 +1,104 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    max-height: 200px;
+    font-family: "DM Sans", sans-serif;
+    color: #fff;
+}
+
+/* Header Styles */
+.fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #ff8c00; /* Different logo color */
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0; /* Reduced container padding */
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 3rem; /* Adjusted heading font size */
+    color: #ff8c00; /* Different heading color */
+}
+
+/* Shop Now Button Styles */
+.shop-now-button,
+.btn-black {
+    background: #333; /* Different button color */
+    color: #fff;
+    padding: 20px 40px; /* Increased button padding */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #ff8c00;
+    color: #333;
+}
+
+/* Text Color Styles */
+.text-black {
+    color: #333;
+}
+
+/* Border Styles */
+.border-black {
+    border: 2px solid #333;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Larger Container on XL Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Fixed Top Navbar Only on Medium and Up */
+@media (min-width: 992px) {
+    .container {
+        padding: 100px 0; /* Adjusted padding */
+    }
+
+    .shop-now-button {
+        min-width: 250px;
+        font-size: 2rem;
+    }
+}

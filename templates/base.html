@@ -16,7 +16,12 @@
 
     <!-- Bootstrap CSS-->
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -24,6 +29,7 @@
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     {% block corejs %}
+        <script src="https://kit.fontawesome.com/b85aa1d61c.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -37,49 +43,53 @@
      <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/?size=256&id=M8TEqSb6Fzi0&format=png">
   </head>
   <body>
-    <header class="container-fluid fixed-top bg-primary text-light py-3">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-4 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="navbar-brand">
-                    <h2 class="logo-font text-light my-0"><strong>Boutique</strong> Ado</h2>
+    <header class="container-fluid fixed-top">
+        <div id="topnav" class="row bg-dark text-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-warning my-0"><strong>Console</strong> CHASE</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-3 my-lg-0">
-                <form method="GET" action="" class="input-group">
-                    <input class="form-control border-0 bg-light text-dark" type="text" name="q" placeholder="Search our site">
-                    <div class="input-group-append">
-                        <button class="form-control btn btn-light rounded-0" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-white rounded-0" type="text" name="q" placeholder="Search our treasures">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-warning border border-white rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-4 text-center text-lg-right">
-                <ul class="list-inline list-unstyled my-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-light nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <div><i class="fas fa-crown fa-lg"></i></div>
+                                <p class="my-0">Royal Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item text-light">Product Management</a>
+                                    <a href="" class="dropdown-item text-warning">King's Management</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item text-light">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item text-light">Logout</a>
+                                <a href="" class="dropdown-item text-white">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item text-white">Log Out</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item text-light">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item text-light">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item text-white">Enlist</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item text-white">Join the Realm</a>
                             {% endif %}
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-warning font-weight-bold{% else %}text-light{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="fas fa-gem fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
@@ -94,7 +104,6 @@
             </div>
         </div>
     </header>
-    
     
     {% if messages %}
         <div class="message-container"></div>
