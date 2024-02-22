@@ -10,7 +10,7 @@ body {
     background-size: cover;
     max-height: 200px;
     font-family: "DM Sans", sans-serif;
-    color: #fff;
+    color: #6D8A96;  
 }
 
 /* Header Styles */
@@ -20,8 +20,12 @@ body {
     right: 0;
     left: 0;
     z-index: 1030;
-    background-color: #333;
+    background-color: #264653;
     padding: 20px 0;
+}
+
+.container-fluid {
+    background-color: #264653;
 }
 
 .header-container {
@@ -32,27 +36,29 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    font-size: 2.5rem;
-    color: #ff8c00; /* Different logo color */
+    color: #F4A261;
 }
 
 /* Container Styles */
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 50px 0; /* Reduced container padding */
+    padding: 50px 0; 
     text-align: center;
 }
 
 .container h1 {
-    font-size: 3rem; /* Adjusted heading font size */
-    color: #ff8c00; /* Different heading color */
+    color: #F4A261; 
+}
+
+#main-nav {
+    background-color: #264653;
 }
 
 /* Shop Now Button Styles */
 .shop-now-button,
 .btn-black {
-    background: #333; /* Different button color */
+    background:#264653; /* Different button color */
     color: #fff;
     padding: 20px 40px; /* Increased button padding */
     border: none;
@@ -68,18 +74,22 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #ff8c00;
-    color: #333;
+    background: #F4A261;
+    color: #F4A261;
 }
 
 /* Text Color Styles */
 .text-black {
-    color: #333;
+    color: #264653;
 }
 
 /* Border Styles */
 .border-black {
-    border: 2px solid #333;
+    border: 2px solid #264653;
+}
+
+.bg-black {
+    background: #264653;
 }
 
 /* -------------------------------- Media Queries */
