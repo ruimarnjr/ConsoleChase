@@ -60,6 +60,25 @@ body {
     background: #000 !important;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+}
+
+.product-container .card {
+    transition: transform 0.3s ease;
+}
+
+.product-container .card:hover {
+    transform: scale(1.05);
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
