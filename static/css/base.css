@@ -1,71 +1,41 @@
-/* Global Styles */
-html, body {
+html {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     background: url('/media/homepage_background.jpg') no-repeat center center fixed;
     background-size: cover;
-    max-height: 200px;
+    height: calc(100vh - 164px);
+    color: #555;
     font-family: "DM Sans", sans-serif;
-    color: #6D8A96;  
 }
 
-/* Header Styles */
-.fixed-top-desktop-only {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    background-color: #264653;
-    padding: 20px 0;
-}
-
-.container-fluid {
-    background-color: #264653;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
+/* from Bulma */
+.icon {
     align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .logo-font {
     text-transform: uppercase;
-    color: #F4A261;
 }
 
-/* Container Styles */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 50px 0; 
-    text-align: center;
+.main-logo-link {
+    width: fit-content;
 }
 
-.container h1 {
-    color: #F4A261; 
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
 }
 
-#main-nav {
-    background-color: #264653;
-}
-
-/* Shop Now Button Styles */
-.shop-now-button,
 .btn-black {
-    background:#264653; /* Different button color */
-    color: #fff;
-    padding: 20px 40px; /* Increased button padding */
-    border: none;
-    border-radius: 8px; /* Rounded corners */
-    font-size: 1.8rem;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
+    background: black;
+    color: white;
 }
 
 .shop-now-button:hover,
@@ -74,41 +44,42 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #F4A261;
-    color: #F4A261;
+    background: #222;
+    color: white;
 }
 
-/* Text Color Styles */
 .text-black {
-    color: #264653;
+    color: #000 !important;
 }
 
-/* Border Styles */
 .border-black {
-    border: 2px solid #264653;
+    border: 1px solid black !important;
 }
 
 .bg-black {
-    background: #264653;
+    background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */
 
-/* Larger Container on XL Screens */
+/* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
-        width: 90%;
-    }
+  .container {
+    max-width: 80%;
+  }
 }
 
-/* Fixed Top Navbar Only on Medium and Up */
+/* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    .container {
-        padding: 100px 0; /* Adjusted padding */
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
     }
 
-    .shop-now-button {
-        min-width: 250px;
-        font-size: 2rem;
+    .header-container {
+        padding-top: 164px;
     }
 }
