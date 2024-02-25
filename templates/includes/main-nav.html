@@ -17,22 +17,22 @@
                 Consoles
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="consoles-link">
-                <a href="" class="dropdown-item">Xbox</a>
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">PlayStation</a>
-                <a href="" class="dropdown-item">Steam Deck</a>
-                <a href="" class="dropdown-item">All Consoles</a>
+                <a href="{% url 'products' %}?category=xbox" class="dropdown-item">Xbox</a>
+                <a href="{% url 'products' %}?category=nintendo" class="dropdown-item">Nintendo</a>
+                <a href="{% url 'products' %}?category=playstation" class="dropdown-item">PlayStation</a>
+                <a href="{% url 'products' %}?category=steam_deck" class="dropdown-item">Steam Deck</a>
+                <a href="{% url 'products' %}?category=xbox,nintendo,playstation,steam_deck" class="dropdown-item">All Consoles</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Controllers</a>
-                <a href="" class="dropdown-item">Headsets</a>
-                <a href="" class="dropdown-item">All Accessories</a>
+            <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
+                <a href="{% url 'products' %}?category=controllers" class="dropdown-item">Controllers</a>
+                <a href="{% url 'products' %}?category=headsets" class="dropdown-item">Headsets</a>
+                <a href="{% url 'products' %}?category=controllers,headsets" class="dropdown-item">All Accessories</a>
             </div>
         </li>
 
@@ -41,9 +41,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
