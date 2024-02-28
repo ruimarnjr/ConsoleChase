@@ -6,7 +6,6 @@ from django.conf import settings
 
 from products.models import Product
 
-# Extracted from the Code Institute's Boutique Ado Walkthrough Project
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
