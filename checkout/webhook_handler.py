@@ -5,6 +5,7 @@ from products.models import Product
 
 import json
 import time
+import stripe
 
 # Extracted from the Code Institute's Boutique Ado Walkthrough Project
 
