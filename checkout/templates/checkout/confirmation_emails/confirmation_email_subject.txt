@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+Console Chase Confirmation for Order Number {{ order.order_number }}
