@@ -82,6 +82,12 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
+                                            <!-- Add to Wishlist Form -->
+                                            <span class="text-light">Add to Wishlist: </span>
+                                                <a class="wishlist_btn hvr-grow"
+                                                    href="{% if user.is_authenticated %}{% url 'add_to_wishlist' product.id %}{% else %}{% url 'account_login' %}{% endif %}">
+                                                    <i class="far fa-heart heart-icon mt-3"></i>
+                                                </a>
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
