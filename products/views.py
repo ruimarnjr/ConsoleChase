@@ -58,9 +58,9 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-# --Extracted from Django Ecommerce Website | Product Reviews | Htmx and Tailwind | Part 20 (https://www.youtube.com/watch?v=8iCqlFyFu2s)
+# --a few bits were extracted from Django Ecommerce Website | Product Reviews | Htmx and Tailwind | Part 20 (https://www.youtube.com/watch?v=8iCqlFyFu2s)
 def product_detail(request, product_id):
-    """ A view to show individual product details & their reviews """
+    """ A view to show individual product details & their reviews"""
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -75,22 +75,27 @@ def product_detail(request, product_id):
         if content:
             reviews = Review.objects.filter(created_by=request.user, product=product)
 
-            if reviews.count() > 0:
+            if reviews.exists():
                 review = reviews.first()
                 review.rating = rating
                 review.content = content
                 review.save()
+                messages.success(request, "Your review has been updated.")
             else:
                 review = Review.objects.create(
                     product=product,
                     rating=rating,
                     content=content,
                     created_by=request.user
-            )
+                )
+                messages.success(request, "Your review has been added.")
+        else:
+            messages.error(request, "Content is required for submitting a review.")
 
             return redirect(reverse('product_detail', args=[product_id]))
 
     return render(request, 'products/product_detail.html', context)
+
 
 @login_required
 def add_product(request):
