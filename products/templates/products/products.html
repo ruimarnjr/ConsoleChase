@@ -83,11 +83,18 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             <!-- Add to Wishlist Form -->
-                                            <span class="text-light">Add to Wishlist: </span>
+                                            {% if wishlist %}
+                                                <span class="text-center">Remove from Wishlist: </span>
+                                                <a href="{% url 'delete_wishlist_item' product.id %}">
+                                                    <i class="fas fa-heart heart-icon"></i>
+                                                </a>
+                                                {% else %}
+                                                <span class="text-light">Add to Wishlist: </span>
                                                 <a class="wishlist_btn hvr-grow"
                                                     href="{% if user.is_authenticated %}{% url 'add_to_wishlist' product.id %}{% else %}{% url 'account_login' %}{% endif %}">
                                                     <i class="far fa-heart heart-icon mt-3"></i>
                                                 </a>
+                                                {% endif %}
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 

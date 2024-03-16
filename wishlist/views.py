@@ -37,11 +37,29 @@ def add_to_wishlist(request, product_id):
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
 
-    Wishlist.objects.create(
-        profile_user=user,
-        product=product
-    )
-    messages.info(
-        request, f'{product.name} has been added to your Wishlist!')
+    if Wishlist.objects.filter(profile_user=user, product=product).exists():
+        messages.warning(request, f'{product.name} is already in your Wishlist!')
+    else:
+        Wishlist.objects.create(profile_user=user, product=product)
+        messages.success(request, f'{product.name} has been added to your Wishlist!')
+
+
+    return redirect(reverse('product_detail', args=[product.id]))
+
+
+@login_required
+def delete_wishlist_item(request, product_id):
+
+    """
+    Delete users wishlist item
+    """
+    user = get_object_or_404(UserProfile, user=request.user)
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    Wishlist.objects.filter(product=product, profile_user=user).delete()
+
+    messages.success(request,
+                  f'{product.name} has been removed from your Wishlist!')
 
     return redirect(reverse('product_detail', args=[product.id]))
