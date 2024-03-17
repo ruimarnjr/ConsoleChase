@@ -10,6 +10,11 @@ body {
     font-family: "DM Sans", sans-serif;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -21,6 +26,15 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    color: #588157;
+}
+
+.text-green {
+    color: #588157;;
+}
+
+.background {
+    background-color: black;
 }
 
 .main-logo-link {
@@ -28,27 +42,27 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: #3A5A40; /* Changed to #3A5A40 */
+    color: #DAD7CD; /* Changed to #DAD7CD */
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: #344E41; /* Changed to #344E41 */
+    color: #DAD7CD; /* Changed to #DAD7CD */
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    background: #DAD7CD; /* Changed to #DAD7CD */
+    color: #344E41 !important; /* Changed to #344E41 */
+    border: 1px solid #344E41; /* Changed to #344E41 */
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
-    color: white !important;
+    background: #344E41; /* Changed to #344E41 */
+    color: #DAD7CD !important; /* Changed to #DAD7CD */
 }
 
 .shop-now-button:hover,
@@ -57,8 +71,8 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #588157; /* Changed to #588157 */
+    color: #DAD7CD; /* Changed to #DAD7CD */
 }
 
 .text-black {
@@ -66,7 +80,7 @@ body {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #344E41 !important; /* Changed to #344E41 */
 }
 
 .bg-black {
@@ -74,13 +88,13 @@ body {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #DAD7CD; /* Changed to #DAD7CD */
+    z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -103,7 +117,7 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+    color: #A3B18A; /* Changed to #A3B18A */
 }
 
 /* ------------------------------- bootstrap toasts */
