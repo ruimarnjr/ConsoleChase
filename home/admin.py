@@ -1,3 +1,7 @@
 from django.contrib import admin
+from home.models import ContactUs
 
-# Register your models here.
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = ['full_name', 'email', 'subject']
+
+admin.site.register(ContactUs, ContactUsAdmin)
