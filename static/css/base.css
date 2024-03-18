@@ -132,6 +132,7 @@ body {
 }
 
 /* Contact Form */
+
 .contact-form-area {
     padding: 20px;
 }
@@ -142,8 +143,8 @@ body {
 }
 
 .contact-form-area .form-control {
-    color: #DAD7CD;
-    border: 1px solid #DAD7CD;
+    color: #3A5A40;
+    border: 1px solid #3A5A40;
     padding: 10px;
     margin-bottom: 15px;
 }
@@ -180,11 +181,12 @@ body {
 }
 
 .text-green {
-    color: #588157;;
+    color: #588157;
 }
 
-.background {
-    background-color: black;
+.delivery-banner {
+    background-color: #3A5A40;
+    color: #000;
 }
 
 .main-logo-link {
@@ -258,6 +260,14 @@ a.category-badge > span.badge:hover {
     position: fixed;
     bottom: 10px;
     right: 10px;
+}
+
+.bg-green {
+    background-color: #3A5A40;
+}
+
+.bg-green h4 {
+    color: #DAD7CD;
 }
 
 .btt-link,
@@ -367,6 +377,18 @@ input[name='q']::placeholder {
 
 .review-list .review-item .comment {
     margin-top: 10px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #344E41;
+}
+
+.footer i {
+    font-size: 25px;
+    margin-right: 15px;
+    color: #DAD7CD;
 }
               
 /* -------------------------------- Media Queries */
