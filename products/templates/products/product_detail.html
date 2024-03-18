@@ -28,10 +28,6 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                    {% if product.get_rating > 0 %}
-                        <p class="mt-1 text-gray-400">Rating: {{ product.get_rating }}/5</p>
-                    {% endif %}
-
                     {% if product.category > 0 %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -39,8 +35,8 @@
                         </a>
                     </p>
                     {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% if product.get_rating > 0 %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>Rating: {{ product.get_rating }}/5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
@@ -118,15 +114,26 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                {% else %}
+                <p><a href="{% url 'account_login' %}">Login</a> to leave a review.</p>
                 {% endif %}
                 <div class="review-list">
                     {% for review in product.reviews.all %}
                     <div class="review-item">
-                        <div class="rating">Rating: {{ review.rating }}/5</div>
+                        <div class="rating">Rating: {{ review.rating }}/5 <i class="fas fa-star mr-1"></i></div>
                         <div class="date">Date: {{ review.created_at|date:"d/m/Y" }}</div>
                         <div class="creator">Created by: {{ review.created_by.username }}</div>
                         <strong>Comment:</strong><br>
                         {{ review.content }}
+                        {% if review.created_by == request.user %}
+                            <small class="ml-3 text-muted">
+                                <a href="{% url 'review_edit' review_id=review.id %}" class="btn btn-link btn-sm">Edit</a> | 
+                                <form action="{% url 'review_delete' review_id=review.id %}" method="post" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-link btn-sm text-danger">Delete</button>
+                                </form>
+                            </small>       
+                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>

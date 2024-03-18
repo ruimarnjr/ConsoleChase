@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
-from .forms import ProductForm
+from .forms import ProductForm, ReviewForm
 
 # Extracted from the Code Institute's Boutique Ado Walkthrough Project
 
@@ -95,6 +95,31 @@ def product_detail(request, product_id):
             return redirect(reverse('product_detail', args=[product_id]))
 
     return render(request, 'products/product_detail.html', context)
+
+
+def review_edit(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your review has been updated successfully.")
+            return redirect('product_detail', product_id=review.product.id)
+    else:
+        form = ReviewForm(instance=review)
+    
+    return render(request, 'products/review_edit.html', {'form': form, 'review': review})
+
+
+def review_delete(request, review_id):
+    """ A view to delete a review """
+
+    review = get_object_or_404(Review, pk=review_id)
+    product_id = review.product.id
+    review.delete()
+    messages.success(request, "Your review has been deleted.")
+    return redirect(reverse('product_detail', args=[product_id]))
 
 
 @login_required

@@ -9,7 +9,6 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
-        'rating',
         'image',
     )
 
@@ -22,7 +21,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('product', 'rating', 'created_by', 'created_at')
+    list_display = ('product', 'created_by', 'created_at')
     list_filter = ('product', 'rating', 'created_at')
     search_fields = ('product__name', 'created_by__username')
 

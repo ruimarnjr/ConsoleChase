@@ -245,7 +245,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: #DAD7CD; /* Changed to #DAD7CD */
+    background: #fafafa; /* Changed to #DAD7CD */
     z-index: -1;
 }
 
@@ -279,6 +279,34 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #A3B18A; /* Changed to #A3B18A */
 }
+
+/* Wishlist item container */
+.wishlist-item {
+    margin-top: 10px;
+}
+
+/* Wishlist button */
+.wishlist-form button {
+    background-color: #588157; /* Green */
+    border: none;
+    color: #DAD7CD; /* Light gray */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.wishlist-form button:hover {
+    background-color: #3A5A40; /* Darker green */
+}
+
+
 
 /* ------------------------------- bootstrap toasts */
 
@@ -345,39 +373,71 @@ input[name='q']::placeholder {
 
 /* Review Section */
 
+/* Container styles */
 .container {
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto; /* Center the container */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Reviews section styles */
 .reviews-section {
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
+.reviews-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Review form styles */
 .review-form .form-group {
     margin-bottom: 20px;
 }
 
-.review-list .review-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-.review-list .review-item .rating {
+.review-form label {
     font-weight: bold;
 }
 
-.review-list .review-item .date {
-    color: #777;
-    font-size: 0.9em;
+.review-form textarea {
+    height: 100px;
 }
 
-.review-list .review-item .comment {
-    margin-top: 10px;
+.review-form button {
+    background-color: #588157;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
+
+.review-form button:hover {
+    background-color: #3A5A40;
+}
+
+/* Review list styles */
+.review-list .review-item {
+    border-bottom: 1px solid #DAD7CD;
+    padding: 20px 0;
+}
+
+.review-list .rating {
+    font-weight: bold;
+}
+
+.review-list .date {
+    color: #888;
+}
+
+.review-list .creator {
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.review-list strong {
+    font-weight: bold;
+}
+
 
 /* Footer */
 
