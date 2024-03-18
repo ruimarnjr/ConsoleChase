@@ -495,8 +495,13 @@ input[name='q']::placeholder {
 
 .footer i {
     font-size: 25px;
-    margin-right: 15px;
+    margin-right: 15px; 
     color: #DAD7CD;
+}
+
+.footer h5,a {
+    color: #DAD7CD;
+    
 }
               
 /* -------------------------------- Media Queries */
