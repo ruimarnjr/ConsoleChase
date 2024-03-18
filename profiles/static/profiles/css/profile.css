@@ -1,3 +1,5 @@
+/* Extracted from Code Institute's Boutique Ado Walkwthrough project */
+
 .order-history {
     max-height: 416px; /* height of profile form + submit button */
     overflow-y: auto;

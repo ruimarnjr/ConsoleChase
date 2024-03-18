@@ -16,7 +16,6 @@ body {
 .main-content {
     height: 37.5rem;
     width: 100%;
-    margin-top: 4rem;
     overflow: hidden;
     position: relative;
 }
@@ -70,12 +69,14 @@ body {
     align-items: center;
     background-color: #DAD7CD;
     padding: 20px;
+    
 }
 
 .newsletter-form-wrapper {
     width: 80%;
     text-align: center; 
     border-radius: 5px;
+    border: 1px solid #344E41;
 }
 
 .newsletter-title {
@@ -306,6 +307,64 @@ input[name='q']::placeholder {
     background-color: #3A5A40; /* Darker green */
 }
 
+/* wishlist.html */
+
+.light-background {
+    background-color: #DAD7CD;
+}
+
+.table-borderless tbody tr:not(:last-child) {
+    border-bottom: 1px solid #DAD7CD; /* Change the color to your preference */
+}
+
+.table-borderless tbody tr:hover {
+    background-color: rgba(218, 215, 205, 0.5); /* Change the background color to the desired color */
+}
+
+.table-borderless tbody img {
+    max-width: 100px; /* Adjust the maximum width of the images as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text {
+    color: #3A5A40;
+}
+
+.green {
+    color: #3A5A40;
+}
+
+.order-button {
+    background-color: #588157;
+    color: #DAD7CD;
+    border: none;
+}
+
+.order-button:hover {
+    background-color: #3A5A40;
+    color: #DAD7CD;
+}
+
+.btt-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btt-link {
+    background-color: #588157;
+    color: #DAD7CD;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.btt-link:hover {
+    background-color: #3A5A40;
+}
 
 
 /* ------------------------------- bootstrap toasts */

@@ -86,7 +86,6 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                        
                     </form>
                 </div>
             </div>
@@ -126,13 +125,13 @@
                         <strong>Comment:</strong><br>
                         {{ review.content }}
                         {% if review.created_by == request.user %}
-                            <small class="ml-3 text-muted">
-                                <a href="{% url 'review_edit' review_id=review.id %}" class="btn btn-link btn-sm">Edit</a> | 
-                                <form action="{% url 'review_delete' review_id=review.id %}" method="post" class="d-inline">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-link btn-sm text-danger">Delete</button>
-                                </form>
-                            </small>       
+                        <small class="ml-3 text-muted">
+                            <a href="{% url 'review_edit' review_id=review.id %}" class="btn btn-link btn-sm">Edit</a> | 
+                            <form action="{% url 'review_delete' review_id=review.id %}" method="post" class="d-inline">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-link btn-sm text-danger">Delete</button>
+                            </form>
+                        </small>       
                         {% endif %}
                     </div>
                     {% endfor %}
