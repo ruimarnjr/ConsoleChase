@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Disallow: /checkout/
+Sitemap: https://consolechase-c0e71dc8b5f6.herokuapp.com/sitemap.xml
