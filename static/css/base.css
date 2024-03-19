@@ -486,7 +486,6 @@ input[name='q']::placeholder {
     font-weight: bold;
 }
 
-
 /* Footer */
 
 .footer {
@@ -499,9 +498,13 @@ input[name='q']::placeholder {
     color: #DAD7CD;
 }
 
-.footer h5,a {
+.footer h5 {
     color: #DAD7CD;
     
+}
+
+.footer a {
+    color: #DAD7CD;
 }
               
 /* -------------------------------- Media Queries */

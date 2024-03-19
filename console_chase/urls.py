@@ -29,4 +29,8 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#Error Handling
 handler404 = 'console_chase.views.handler404'
+handler403 = 'console_chase.views.handler403'
+handler405 = 'console_chase.views.handler405'
+handler500 = 'console_chase.views.handler500'

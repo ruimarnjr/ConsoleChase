@@ -31,7 +31,6 @@
             </div>
         </div>
     </section>
-
     <!-- Shop by category section -->
 <section class="section-margin-bottom">
     <div class="container mt-5 text-center">
@@ -49,7 +48,7 @@
             <div class="col-md-3 mb-4">
                 <div class="category-card text-center">
                     <a href="{% url 'products' %}?category=xbox,nintendo,playstation,steam_deck">
-                        <img src="/media/xbox_series_x.webp" class="category-image img-fluid" alt="Category Consoles">
+                        <img src="{{ MEDIA_URL }}xbox_series_x.webp" class="category-image img-fluid" alt="Category Consoles">
                         <p class="category-title font-weight-bold mt-2 text-uppercase">Consoles</p>
                     </a>
                 </div>
@@ -58,7 +57,7 @@
             <div class="col-md-3 mb-4">
                 <div class="category-card text-center">
                     <a href="{% url 'products' %}?category=controllers,headsets">
-                        <img src="/media/ps5_controller_edge.webp" class="category-image img-fluid" alt="Category Accessories">
+                        <img src="{{ MEDIA_URL }}ps5_controller_edge.webp" class="category-image img-fluid" alt="Category Accessories">
                         <p class="category-title font-weight-bold mt-2 text-uppercase">Accessories</p>
                     </a>
                 </div>
@@ -76,7 +75,7 @@
             <div class="col-md-3 mb-4">
                 <div class="category-card text-center">
                     <a href="{% url 'products' %}?category=new_arrivals">
-                        <img src="/media/nintendo_switch_oled_red_and_blue.webp" class="category-image img-fluid" alt="Category New Arrivals">
+                        <img src="{{ MEDIA_URL }}nintendo_switch_oled_red_and_blue.webp" class="category-image img-fluid" alt="Category New Arrivals">
                         <p class="category-title font-weight-bold mt-2 text-uppercase">New Arrivals</p>
                     </a>
                 </div>
@@ -85,7 +84,6 @@
         </div>
     </div>
 </section>
-
 <section class="forms">
     <div class="container">
         <div class="row">
@@ -117,7 +115,6 @@
                     </div>      
                 </div>
             </div>
-
             <!-- Contact Form -->
             <div class="col-md-6 mb-4">
                 <div class="contact-form-area p-4">
@@ -156,7 +153,6 @@
         </div>
     </div>
 </section>
-
 <!-- Footer -->
 <footer class="footer mt-auto py-3">
     <div class="container">
@@ -179,7 +175,4 @@
         </div>
     </div>
 </footer>
-
-</div>
-
 {% endblock %}
