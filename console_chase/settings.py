@@ -13,7 +13,7 @@ import os
 import dj_database_url
 from pathlib import Path
 if os.path.exists("env.py"):
-  import env 
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,9 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-ruimarnjr-consolechase-b6lw2i8441a.ws-eu110.gitpod.io', 'consolechase-c0e71dc8b5f6.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    '8000-ruimarnjr-consolechase-b6lw2i8441a.ws-eu110.gitpod.io',
+    'consolechase-c0e71dc8b5f6.herokuapp.com',
+    'localhost']
 
 # Application definition
 
@@ -79,7 +82,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',

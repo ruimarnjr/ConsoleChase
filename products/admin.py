@@ -3,6 +3,7 @@ from .models import Product, Category, Review
 
 # Register your models here.
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -14,16 +15,19 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
 
+
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('product', 'created_by', 'created_at')
     list_filter = ('product', 'rating', 'created_at')
     search_fields = ('product__name', 'created_by__username')
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

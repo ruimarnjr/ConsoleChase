@@ -41,7 +41,7 @@
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
+                            <a href="{% url 'product_detail' item.product.id %}" aria-label="View product details for product" title="View product details">
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
@@ -137,11 +137,11 @@
         </div>
     </div>
     <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
+        <p class="text-light logo-font loading-spinner">
             <span class="icon">
                 <i class="fas fa-3x fa-sync-alt fa-spin"></i>
             </span>
-        </h1>
+        </p>
     </div>
 {% endblock %}
 

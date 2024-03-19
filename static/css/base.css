@@ -41,24 +41,24 @@ body {
 
 /* Category card container */
 .category-card {
-    background-color: #ffffff; /* Background color */
-    border-radius: 10px; /* Border radius */
-    padding: 20px; /* Padding */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    background-color: #ffffff; 
+    border-radius: 10px;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* Category image styles */
 .category-image {
-    width: 100%; /* Ensure the image takes up the full width of the container */
-    border-radius: 5px; /* Border radius */
-    margin-bottom: 10px; /* Bottom margin */
+    width: 100%; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
 }
 
 /* Category title styles */
 .category-title {
-    font-size: 18px; /* Font size */
-    color: #333333; /* Text color */
-    margin-bottom: 0; /* Remove bottom margin */
+    font-size: 18px; 
+    color: #333333; 
+    margin-bottom: 0; 
 }
 
 /* Newsletter form styles */
@@ -87,7 +87,7 @@ body {
 .newsletter-required {
     text-align: center;
     margin-bottom: 10px;
-    color: #A3B18A;
+    color: #344E41;
 }
 
 .newsletter-input-group {
@@ -151,7 +151,7 @@ body {
 }
 
 .contact-form-area .btn-primary {
-    background-color: #3A5A40;
+    background-color: #344E41;
     color: #DAD7CD;
     border: none;
     padding: 10px 20px;
@@ -160,7 +160,7 @@ body {
 }
 
 .contact-form-area .btn-primary:hover {
-    background-color: #344E41;
+    background-color: #3A5A40;
 }
 
 .forms {
@@ -182,7 +182,7 @@ body {
 }
 
 .text-green {
-    color: #588157;
+    color: #344E41;
 }
 
 .delivery-banner {
@@ -195,27 +195,27 @@ body {
 }
 
 .shop-now-button {
-    background: #3A5A40; /* Changed to #3A5A40 */
-    color: #DAD7CD; /* Changed to #DAD7CD */
+    background: #3A5A40; 
+    color: #DAD7CD; 
     min-width: 260px;
 }
 
 .btn-black {
-    background: #344E41; /* Changed to #344E41 */
-    color: #DAD7CD; /* Changed to #DAD7CD */
+    background: #344E41; 
+    color: #DAD7CD;
 }
 
 .btn-outline-black {
-    background: #DAD7CD; /* Changed to #DAD7CD */
-    color: #344E41 !important; /* Changed to #344E41 */
-    border: 1px solid #344E41; /* Changed to #344E41 */
+    background: #DAD7CD; 
+    color: #344E41 !important; 
+    border: 1px solid #344E41; 
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: #344E41; /* Changed to #344E41 */
-    color: #DAD7CD !important; /* Changed to #DAD7CD */
+    background: #344E41; 
+    color: #DAD7CD !important; 
 }
 
 .shop-now-button:hover,
@@ -224,8 +224,8 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #588157; /* Changed to #588157 */
-    color: #DAD7CD; /* Changed to #DAD7CD */
+    background: #588157; 
+    color: #DAD7CD; 
 }
 
 .text-black {
@@ -233,7 +233,7 @@ body {
 }
 
 .border-black {
-    border: 1px solid #344E41 !important; /* Changed to #344E41 */
+    border: 1px solid #344E41 !important; 
 }
 
 .bg-black {
@@ -246,7 +246,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: #fafafa; /* Changed to #DAD7CD */
+    background: #fafafa; 
     z-index: -1;
 }
 
@@ -278,7 +278,7 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: #A3B18A; /* Changed to #A3B18A */
+    color: #A3B18A; 
 }
 
 /* Wishlist item container */
@@ -288,9 +288,9 @@ input[name='q']::placeholder {
 
 /* Wishlist button */
 .wishlist-form button {
-    background-color: #588157; /* Green */
+    background-color: #588157; 
     border: none;
-    color: #DAD7CD; /* Light gray */
+    color: #DAD7CD; 
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -304,7 +304,7 @@ input[name='q']::placeholder {
 
 /* Hover effect */
 .wishlist-form button:hover {
-    background-color: #3A5A40; /* Darker green */
+    background-color: #3A5A40; 
 }
 
 /* wishlist.html */
@@ -314,16 +314,16 @@ input[name='q']::placeholder {
 }
 
 .table-borderless tbody tr:not(:last-child) {
-    border-bottom: 1px solid #DAD7CD; /* Change the color to your preference */
+    border-bottom: 1px solid #DAD7CD; 
 }
 
 .table-borderless tbody tr:hover {
-    background-color: rgba(218, 215, 205, 0.5); /* Change the background color to the desired color */
+    background-color: rgba(218, 215, 205, 0.5); 
 }
 
 .table-borderless tbody img {
-    max-width: 100px; /* Adjust the maximum width of the images as needed */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100px; 
+    height: auto; 
 }
 
 .text {
@@ -452,7 +452,7 @@ input[name='q']::placeholder {
 }
 
 .review-form button {
-    background-color: #588157;
+    background-color: #344E41;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -460,7 +460,7 @@ input[name='q']::placeholder {
 }
 
 .review-form button:hover {
-    background-color: #3A5A40;
+    background-color: #588157;
 }
 
 /* Review list styles */
@@ -474,7 +474,7 @@ input[name='q']::placeholder {
 }
 
 .review-list .date {
-    color: #888;
+    color: #344E41;
 }
 
 .review-list .creator {
@@ -484,6 +484,10 @@ input[name='q']::placeholder {
 
 .review-list strong {
     font-weight: bold;
+}
+
+.btn-link {
+    color: #344E41;
 }
 
 /* Footer */
@@ -498,7 +502,7 @@ input[name='q']::placeholder {
     color: #DAD7CD;
 }
 
-.footer h5 {
+.footer h3 {
     color: #DAD7CD;
     
 }
@@ -563,7 +567,6 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
     background-color: #222;
-    border-color: #222;
 }
 
 .allauth-form-inner-content a {
@@ -594,7 +597,6 @@ input[name='q']::placeholder {
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
-    border-color: #dc3545;
     border-radius: 0;
 }
 

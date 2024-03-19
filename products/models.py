@@ -6,7 +6,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -18,7 +18,8 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -38,12 +39,14 @@ class Product(models.Model):
         if reviews_total > 0:
             return reviews_total / self.reviews.count()
 
-        return 0 
+        return 0
 
 
 class Review(models.Model):
-    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        Product, related_name='reviews', on_delete=models.CASCADE)
     rating = models.IntegerField(default=3)
     content = models.TextField()
-    created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
+    created_by = models.ForeignKey(
+        User, related_name='reviews', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
