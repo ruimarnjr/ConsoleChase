@@ -187,6 +187,11 @@ Email Newsletter: Implementing an email newsletter subscription feature on the w
 
 * Newsletter + Contact Us:
      ![Newsletter](docs/readme_images/newsletter.png)
+     ![Newsletter](docs/readme_images/mailchimp.png)
+
+* Contact Us Form can be seen in the Admin Panel
+    ![contact](docs/readme_images/contact_admin.png)
+    ![contact](docs/readme_images/contact_admin_1.png)
 
 * Footer
    ![Footer](docs/readme_images/footer.png)
