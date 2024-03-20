@@ -52,7 +52,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 ### JavaScript Validation
 
-[JSHint](https://jshint.com/) was used to validate the JavaScript code added to the project. External JS, for Bootstrap, jQuery and Fontawesome purposes were not validated through JSHint.
+[JSHint](https://jshint.com/) was used to validate the JavaScript code added to the project. 
 
 | Page | Screenshot | Errors | Warnings |
 | ---- | ---------- | ------ | -------- |
@@ -64,22 +64,21 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 ### Python Validation
 
-[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below. none = no issues present.
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. 
 
 | Feature | admin | forms | models | urls | views | extra |
 |---------|----------|----------|-----------|---------|----------|-------|
 | Bag  | n/a | n/a | n/a | ![python validation](docs/testing_images/urls_bag.png) | ![python validation](docs/testing_images/views_bag.png) 1 warning: line too long. It's the first line that is rendering stuff. Decided to keep it like this for indentation purposes | ![python validation](docs/testing_images/contexts_bag.png)| |
-| Checkout | ![python validation](docs/testing_images/admin_checkout.png) | ![python validation](docs/testing_images/checkout_forms.png) | ![python validation](docs/testing_images/models_checkout.png) | ![python validation](docs/testing_images/urls_checkout.png) | ![python validation](docs/testing_images/views_checkout.png) 4 line too big warnings. Unable to fix due to indentation purposes.|![python validation](docs/testing_images/signals_checkout.png)![python validation](docs/testing_images/webhooks_checkout.png)![python validation](docs/testing_images/webhook_handler_checkout.png)| n/a |
+| Checkout | ![python validation](docs/testing_images/admin_checkout.png) | ![python validation](docs/testing_images/checkout_forms.png) | ![python validation](docs/testing_images/models_checkout.png) | ![python validation](docs/testing_images/urls_checkout.png) | ![python validation](docs/testing_images/views_checkout.png) 4 warnings: line too long. Unable to fix due to indentation purposes.|![python validation](docs/testing_images/signals_checkout.png)![python validation](docs/testing_images/webhooks_checkout.png)![python validation](docs/testing_images/webhook_handler_checkout.png)4 warnings: line too long. Unable to fix due to indentation purposes| n/a |
 | Home | ![python validation](docs/testing_images/admin_home.png) | none | ![python validation](docs/testing_images/models_home.png) | ![python validation](docs/testing_images/urls_home.png) | ![python validation](docs/testing_images/views_home.png) | n/a |
-| Products | ![python validation](docs/testing_images/admin_products.png) | ![python validation](docs/testing_images/forms_product.png) | ![python validation](docs/testing_images/models_product.png) | ![python validation](docs/testing_images/urls_products.png) | ![python validation](docs/testing_images/views_products.png)1 warning "block comment should start with #(block comment is starting with #) 3 line too big warnings. Unable to fix due to indentation purposes. | none |
+| Products | ![python validation](docs/testing_images/admin_products.png) | ![python validation](docs/testing_images/forms_product.png) | ![python validation](docs/testing_images/models_product.png) | ![python validation](docs/testing_images/urls_products.png) | ![python validation](docs/testing_images/views_products.png)1 warning "block comment should start with #(block comment is starting with #) 3 line too big warnings. Unable to fix due to indentation purposes. | n/a |
 | Profiles | ![python validation](docs/testing_images/admin_profile.png) | ![python validation](docs/testing_images/forms_profile.png) | ![python validation](docs/testing_images/models_profile.png) | ![python validation](docs/testing_images/urls_profile.png) | ![python validation](docs/testing_images/views_profile.png) | n/a |
-| Wishlist | ![python validation](docs/testing_images/wishlist_admin.png) | none | ![python validation](docs/testing_images/wishlist_models.png) | ![python validation](docs/testing_images/wishlist_urls.png) | ![python validation](docs/testing_images/wishlist_views.png) | none |
+| Wishlist | ![python validation](docs/testing_images/wishlist_admin.png) | none | ![python validation](docs/testing_images/wishlist_models.png) | ![python validation](docs/testing_images/wishlist_urls.png) | ![python validation](docs/testing_images/wishlist_views.png) | n/a |
 
 ### CSS Validation
 
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by [CDN](https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css) was not tested.
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. 
 
-To keep my document concise I have not included every screenshot of the CSS validations, as they are all the same, but the results are as follows.
 ![css validation](docs/testing_images/base_css.png)
 ![css validation](docs/testing_images/profile_css.png)
 
@@ -90,23 +89,24 @@ To keep my document concise I have not included every screenshot of the CSS vali
 
 ### Lighthouse Scores
 
-Lighthouse testing was carried out in Incognito mode to achieve the best result. Images used in the site's design were saved in png format, and compressed using [tinypng](https://tinypng.com/) and [Convertio](https://www.convertio.co) to offer the best chance for a decent performance score.
+Lighthouse testing was carried out in Incognito mode to achieve the best result. 
 
-| Page | Lighthouse Scores - Desktop | Notes |
-| ---- | ----------------- | -------- |
-| Home |   ![lighthouse home](docs/testing_images/home_lh.png)   |    ![best practise errors](docs/testing_images/home_lh_bp.png)  Score lower due to aspect ratio or images, not using webp images and Stripe Cookie    |
-| All  |  ![lighthouse all](docs/testing_images/prod_lh.png)  |  None        |
-| Read  | ![lighthouse article](docs/testing_images/article_lh.png)   |   None  |
-| Account |  ![lighthouse account](docs/testing_images/profile_lh.png)              |    As before with Stripe Cookie  |
-| Wishlist |  ![lighthouse wishlist](docs/testing_images/wishlist_lh.png)   |  As before with images rendering and Stripe Cookie   |
+| Page | Lighthouse Scores  |
+| ---- | ----------------- |
+| Home |   ![lighthouse home](docs/testing_images/homepage_lighthouse.png)   |  
+| Add Product  |  ![lighthouse all](docs/testing_images/add_product_lighthouse.png)  | 
+| Bag  | ![lighthouse article](docs/testing_images/bag_lighthouse.png)   |   
+| Checkout |  ![lighthouse account](docs/testing_images/checkout_lighthouse.png)              |   
+| Checkout Success |  ![lighthouse wishlist](docs/testing_images/checkout_success_lighthouse.png)   |    
+| Edit Product |  ![lighthouse wishlist](docs/testing_images/edit_product_lighthouse.png)   |    
+| Error 404 Page |  ![lighthouse wishlist](docs/testing_images/error_404_lighthouse.png)   |    
+| Product Detail |  ![lighthouse wishlist](docs/testing_images/product_detail_lighthouse.png)   |  
+| Products |  ![lighthouse wishlist](docs/testing_images/products_lighthouse.png)   |  
+| Profile |  ![lighthouse wishlist](docs/testing_images/profile_lighthouse.png)   |  
+| Review Edit |  ![lighthouse wishlist](docs/testing_images/review_edit_lighthouse.png)   |  
+| Wishlist |  ![lighthouse wishlist](docs/testing_images/wishlist_lighthouse.png)   |  
 
-| Page | Lighthouse Scores - Mobile | Notes |
-| ---- | ----------------- | -------- |
-| Home |  ![lighthouse home](docs/testing_images/home_moblh.png) | ![performance errors](docs/testing_images/home_perform_mob_er.png) Score lower due to images not being webp and STripe/jQuery CDN. I will look into this for future versions to better understand how I can improve this score.  |
-| All  | ![lighthouse all products mobile](docs/testing_images/all_moblh.png)   | As before  |
-| Read |  ![lighthouse article mobile](docs/testing_images/read_moblh.png) |  As before  |
-| Account | ![lighthouse account mobile](docs/testing_images/account_moblh.png)   |  As before  |
-| Wishlist | ![lighthouse wishlist mobile](docs/testing_images/wishlist_moblh.png)  | As before   |
+**Overall Lighthouse notes: A few pages with low performance impact by Stripe Cookies.**
 
 
 ## Manual Testing
@@ -115,35 +115,30 @@ Lighthouse testing was carried out in Incognito mode to achieve the best result.
 
 Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately.
 
-| Feature                    | Tested?  | User Input Required | User Feedback Provided     | Pass/Fail | Fix |
-|----------------------------|----------|---------------------|----------------------------|-----------|-----|
-| Navbar Logo and Icons      | Yes      | Click Links bring user to correct destination    | Text Colour Change/Icon Animation/Dropdowns | Pass | N/A |
-| Home Page                  | Yes      | Hover/Click interactive features | Carousel moves, Accordion FAQ section | Pass | N/A |
-| Register Page              | Yes      | Text Input/Click Links | Form field highlight/Font weight change on hover/Toast message | Pass | N/A |
-| Email Validate             | Yes      | Click Links | Button animation/Toast message | Pass | N/A |
-| Forgot Password             | Yes     | Text Input/Click Links | Form field highlight/Button animation/Toast message | Pass | N/A |
-| Log In Page                | Yes      | Text Input/Click Links | Form field highlight/Font weight on hover/Toast message | Pass | N/A |
-| Log Out Page               | Yes      | Click Links bring user to correct destination | Button animation/Font color change/Toast message | Pass | N/A |
-| Account - Edit Address     | Yes      | Text Input/Click to Save | Form field highlight/Button animation/Toast message | Pass | N/A |
-| Search                     | Yes      | Text Input/Click to Search | Pop up Modal/Form field highlight/Button Animation | Pass | N/A |
-| Contact Us Form            | Yes      | Text Input/Click to Save | Pop up Modal/Form field highlight/Button animation | Pass | N/A |
-| Newsletter Sign Up         | Yes      | Text Input/ Click to Subscribe | Button animation/New tab subscription confirmation | Pass | N/A |
-| Admin Dashboard            | Yes      | Click Links brings user to correct URL | Button animation on hover | Pass | N/A |
-| Products                   | Yes      | Click product brings user to product description | Pointer change on hover of products | Pass | N/A |
-| Add Product                | Yes      | Navigated to Admin Dashboard, clicked 'Add Product', Completed form, Form submits correctly to display the product. | Form field highlight/Button animation/Toast message, new product uploaded. | Pass | N/A |
-| Edit Product               | Yes      | Navigated to Admin Dashboard, clicked 'Edit Product', Completed form, Form submits correctly to display the edited product. | Form field highlight/Button animation/Toast message, product updated. | Pass | N/a |
-| View Article               | Yes      | Click link for article | Article card border change on hover | Pass | N/A |
-| Add Article                | Yes      | Navigated to Admin Dashboard, clicked 'Add Article', Completed form, Form submits correctly to display the article. | Form field highlight/Button animation/Toast message, new article uploaded. | Pass | N/A |
-| Edit Article               | Yes      | Navigated to Admin Dashboard, clicked 'Edit Article', Completed form, Form submits correctly to display the edited article. | Form field highlight/Button animation/Toast message, article edited and uploaded. | Pass | N/A |
-| Product Quantity           | Yes      | Click increment/decrement | Colour change on hover/product quantity successfully changed | Pass | N/A |
-| Product Sizes              | Yes      | Click dropdown/Click to select | Form field highlight/Size highlight | Pass | N/A |
-| Checkout                   | Yes      | Click 'Secure Checkout', correct products in bag, entered delivery and payment details, submitted form to process payment. | Form field highlight/Button animation/Toast message, Loading spinner when processing order, order processed saved to account and email sent. | Pass | N/A |
-| Footer                     | Yes      | Click Link brings user to FAQ section on Home Page | Font colour change on hover | Pass | N/A |
-| Delivery Banner            | Yes      | Click dropdown to reveal banner | Dropdown arrow resize on hover/banner dropdown | Pass | N/A |
+| Feature                    | Tested?  | User Input Required  | Pass/Fail |
+|----------------------------|----------|---------------------|------------------|
+| Navbar Logo and Icons      | Yes     | Clicking on links ensures users are directed to the appropriate pages.    |  Pass |
+| Home Page                  | Yes      | Interactive features respond to both hovering and clicking actions.  | Pass | N/A |
+| Register Page              | Yes      | Users can either input text or click on links for navigation purposes.  | Pass | 
+| Email Validate             | Yes      | Links facilitate seamless navigation throughout the website. | Pass | 
+| Forgot Password             | Yes     | Users have the option to input text or utilize links for various actions.  | Pass | 
+| Log In Page                | Yes      | Text input and link clicking serve as primary methods of interaction.  | Pass | 
+| Log Out Page               | Yes      | CClicking on links guarantees users are taken to the intended destinations. | Pass | 
+| Account - Edit Address     | Yes      |Users can choose to either input text or click to save their changes. | Pass | 
+| Search                     | Yes      | Text input or clicking facilitates the search functionality within the platform.| Pass |
+| Contact Us Form            | Yes      | Inputting text or clicking allows users to save their preferences.  | Pass | 
+| Newsletter Sign Up         | Yes      | Text inputting or clicking enables users to subscribe to desired content.  | Pass | 
+| Admin Dashboard            | Yes      | Links ensure users are directed to the correct web addresses.  | Pass | 
+| Products                   | Yes      | Clicking on a product triggers redirection to its detailed description. | Pass | 
+| Add Product                | Yes      | Navigated to Admin Dashboard, clicked 'Add Product', Completed form, Form submits correctly to display the product.  | Pass |  
+| Edit Product               | Yes      | Navigating to the Admin Dashboard, selecting 'Edit Product,' completing the form, and successfully submitting it showcases the updated product.  | Pass | 
+| Product Quantity           | Yes      | Incrementing or decrementing actions can be executed with a simple click. | Pass | 
+| Checkout                   | Yes      | Clicking 'Secure Checkout' after verifying the contents of the shopping bag, entering delivery and payment details, and submitting the form ensures a seamless payment process. | Pass | N/A |
+| Footer                     | Yes      | Clicking on a specific link directs users to a collection of useful resources. | Pass |
 
 ### Browser Compatibility
 
-Console Chase was tested on the following browsers, purchases were made, article/products added/edited/deleted, error pages, all features were accessible and working as intended:
+Console Chase was tested on the following browsers.
 
 - Chrome v117.0.5938.92
 - Firefox v114.0.2
@@ -159,19 +154,24 @@ Console Chase was tested on the following browsers, purchases were made, article
 
 ### Responsiveness
 
-Using the Bootstrap framework allowed a more rapid development of a responsive website. Starting with mobile first, Console Chasewas created to ensure the customer has an unhindered, positive experience when shopping. Console Chase was regularly tested during development using Dev Tools to check for display issues on iPhone4 -> iPhone 12/Samsung Galaxy S20, iPad/iPad Pro and laptop/desktop screen sizes. Once deployed to Heroku, Console Chase was tested on real world devices. No major issues were detected, changes were made to the checkout view to remove the product image on smaller screens and only display important product information. There were no major differences between desktop and tablet views thanks to the Bootstrap Grid system of columns. A selection of the screen size view differences are displayed below:
+Console Chase is designed to be responsive across all screen sizes, ensuring a seamless browsing experience whether you're accessing it from a desktop computer, laptop, tablet, or smartphone. With responsive design, our site dynamically adjusts its layout and content to fit the screen dimensions of any device, providing optimal viewing and interaction for all users. Whether you're at home, on the go, or switching between devices, you can enjoy consistent functionality and aesthetics across the board."
 
-![Console Chase Desktop/Mobile Home](docs/testing_images/dt_mob_home_resp.png)  
-*Console Chase Desktop/Mobile Home Responsive Views*
+* Phone
 
-![Console Chase Desktop/Mobile Products](docs/testing_images/dt_mob_prod_resp.png)  
-*Console Chase Desktop/Mobile Products Responsive Views*
+![Console Chase Desktop/Mobile Home](docs/testing_images/phone.png)  
 
-![Console Chase Desktop/Mobile Articles](docs/testing_images/dt_mob_art_resp.png)  
-*Console Chase Desktop/Mobile Articles Responsive Views*
+* Tablet
 
-![Console Chase Desktop/Mobile Bag](docs/testing_images/dt_mob_bag_resp.png)  
-*Console Chase Desktop/Mobile Bag Responsive Views*
+![Console Chase Desktop/Mobile Products](docs/testing_images/tablet.png)  
+
+* Laptop
+
+![Console Chase Desktop/Mobile Articles](docs/testing_images/laptop.png)  
+
+* Larger Screens
+
+![Console Chase Desktop/Mobile Bag](docs/testing_images/larger_screens.png)  
+
 
 
 
@@ -181,68 +181,44 @@ User Stories are documented in the Console Chase [GitHub Projects Board](https:/
 
 | User Story                 | Acceptance Criteria Met?  | Tested | Response     | Pass/Fail | Fix     |
 |----------------------------|---------------------------|--------|--------------|-----------|---------|
-| As a **customer**, I can **view the site's home page** so that I can **understand the site's intentions and purpose**. | Yes | Yes | Home page is visible | Pass | n/a |
-| As a **customer**, I can **see and use the navigation bar** so that I can **make my way around the site and get to where I would like**. | Yes | Yes | Navbar visible to all users in desktop/tablet and mobile views | Pass | n/a |
-| As a **customer**, I can **enter text into the search bar** so that I can **search for a specific item**. | Yes | Yes | Search bar accepts user input and returns search results when search form is submitted | Pass | n/a |
-| As a **customer** I can **create and manage an account with Console Chase** so that I can **keep my personal details, order history and speed up my checkout process**. | Yes | Yes | Register form takes new user information, sends verification email link to confirm account. User may then sign in to view their account, edit their personal information and start saving their order histories from purchases made | Pass | n/a |
-| As a **customer**, I can **edit my personal details on my account** so that I can **keep them up to date**. | Yes | Yes | User information is editable | Pass | n/a |
-| As a **site user**, I can **enter my login details** so that I can **login in to my account**. | Yes | Yes | User may login with correct details | Pass | n/a |
-|  As a **site user**, I can **click on the visible links in the footer** so that I can **view the relevant information and destinations**. | Yes | Yes | Footer links return user to relevant area in website and external links open in a new tab | Pass | n/a |
-| As a **site user**, I can **register my email and receive a validation link via email** so that I can **create an account with Console Chase to track my spending and purchases**. | Yes | Yes | Registration process works as expected to accept new users | Pass | n/a |
-| As a **customer**, I can **use the Contact Us form** so I can **send a message to the business/site admin**. | Yes | Yes | Contact form opens in a modal, accepts user input, submits form and returns thank you page for user, and email to Console Chase Admin's inbox. | Pass | n/a |
-| As a **site user** I can **interact with sorting and view features on the 'All Products' page** so that I can **improve my shopping experience on the site**. | Yes | Yes | Price, category, A-Z, rating works as expected to display products in a certain order. | Pass | n/a |
-| As a **site user**, I can **click on a navbar item for a specific category** so that I can **choose to view a smaller amount of related products**. | Yes | Yes | Products sorted correctly into categories. | Pass | n/a |
-| As a **customer**, I can **choose an individual product** so that I can **view its description, price, colours, sizes available etc**. | Yes | Yes | Individual products returned when clicked on, all relevant information displayed and is interactable. | Pass | n/a |
-| As a **site admin** I can **add a product to my inventory using a frontend from** so that I can **increase my range/amount of products available on site**. | Yes | Yes | Add product form takes new information and displays it in the product template correctly. | Pass | n/a |
-| As a **site admin**, I can **edit existing inventory from a frontend form** so I can **change the quantity of stock, sizes, colours or edit products description, price or image**. | Yes | Yes | Edit product form takes user input and returns it correctly in the template. Product stock levels will be implemented in future features. | Pass | n/a |
-| As a **site admin**, I can **delete products from the inventory using a frontend form** so that I can **remove it from sale**. | Yes | Yes | Delete product modal appears when clicked on and delete confirmation is needed before product is removed from database. | Pass | n/a |
-| As a **customer** I can **create and manage an account with Console Chase** so that I can **keep my personal details, order history and speed up my checkout process**. | Yes | Yes | Account functions as expected, all user information is handled appropriately and displayed within the account template | Pass | n/a |
-| As a **customer**, I can **click on 'Add to Bag' in my product view**so that I can **add the product to my bag**. | Yes | Yes | Add to Bag works when clicked and product is added to bag and displayed in a success toast with the product displayed. A link to the bag is displayed in the toast message. | Pass | n/a |
-| As a **customer**, I can **increase/decrease/remove quantities of a product in my bag** so that I can **have control over what I wish to purchase**. | Yes | Yes | Increment/Decrement/Remove buttons work as expected when clicked by user. | Pass | n/a |
-| As a **customer**, I can **view my bag total from any page** so that I can **keep track of my potential spending**. | Yes | Yes | Bag item quantity is displayed in a small bubble top right of shopping bag icon in navbar. Bubble disappears if no items in customers bag. | Pass | n/a |
-| As a **customer**, I can **view my running total of carbon saved when I add products** so that I can **see how much carbon my purchases would had saved in their production vs non eco-friendly products of the same type**. | Yes | Yes | Customer can see their carbon total in #cc4818 orange font below their grand total. They are further informed of their carbon total in the checkout page | Pass | n/a |
-| As a **customer**, I can **view my total carbon footprint saving on checkout and it's associated climate impact/lifestyle changes** so that I can **understand the equivalent value of carbon saved versus purchasing the same non eco-friendly products**. | Yes | Yes | Carbon totals again displayed in green portion of checkout page to inform customer of their savings. | Pass | n/a |
-| As a **customer**, I can **checkout my products securely** so that I can **complete my purchase**. | Yes | Yes | Payments handled correctly through Stripe's payment system, tested many times using the '4242424242...' Stripe testing card credentials. | Pass | n/a |
-| As a **customer**, I can **receive an email after purchasing** so that I can **confirm my purchase and keep a record of my order**. | Yes | Yes | Email is delivered to customer after making a purchase. |Pass | n/a |
-| As a **site user** I can **view error pages with 'Home' links** so that I can **return to the main page if a page is missing or forbidden**. | Yes | Yes | Error pages display correctly when user attempts to access non-existent content, restricted content. | Pass | n/a |
-|  As a **logged-in user** I can **click the 'Add to Wishlist' button** so that I can **keep a record of my favourite items**. | Yes | Yes | Add to wishlist button works for logged in user. | Pass | n/a |
-|  As a **logged-in user** I can **click the 'Remove' icon beside my Wishlist item** so that I can **remove that product from my Wishlist**. | Yes | Yes | Remove button eliminates product from user's wishlist | Pass | n/a |
-| As a **customer**, I can **enter my details into the newsletter form** so I can **receive emails about products or environmental issues/climate saving tips**. | Yes | Yes | Newsletter form submission brings user to new tab of MailChimp subscription confirmation. When checked, MailChimp subscription address book shows new user added. | Pass | n/a |
+| **As a shopper**, I can **view the site's home page** to **understand its intentions and purpose**. | Yes | Yes | Homepage functionality verified | Pass | n/a |
+| **As a shopper**, I can **utilize the navigation bar** to **seamlessly explore and navigate the site**. | Yes | Yes | The navigation bar allows seamless site exploration | Pass | n/a |
+| **As a shopper**, I can **enter search queries into the search bar** to **locate specific items efficiently**.. | Yes | Yes | The search bar facilitates efficient item location through search queries | Pass | n/a |
+| **As a shopper**, I can **navigate to the 'All Products' view** to **explore the complete product catalog**.. | Yes | Yes | Accessing the 'All Products' view allows exploration of the complete product catalog | Pass | n/a |
+| **As a shopper**, I can **create and manage** an account for storing personal details, order history, and expediting the checkout process. | Yes | Yes | Managing an account enables the storage of personal details, order history, and streamlines the checkout process | Pass | n/a |
+| **As a shopper**, I can **edit personal details on the account** to **ensure they remain current and accurate**. | Yes | Yes | Editing personal details in the account ensures they stay current and accurate | Pass | n/a |
+| **As a shopper**, I can select an individual product to access detailed information such as description, price. | Yes | Yes | Selecting an individual product provides access to detailed information including description, price. | Pass | n/a |
+| **As a shopper**, I can **click on 'Add to Bag' in the product view** to **include the chosen item in the shopping bag**. | Yes | Yes | Clicking on 'Add to Bag' in the product view adds the chosen item to the shopping bag | Pass | n/a |
+| **As a shopper**, I can **adjust quantities or remove products from the shopping bag** for **better control over the purchase**. | Yes | Yes | I can easily adjust quantities or remove products from the shopping bag to have better control over the purchase. | Pass | n/a |
+| **As a shopper**, I can **view the shopping bag total from any page** to **monitor potential spending**. | Yes | Yes | I can conveniently view the shopping bag total from any page to keep track of potential spending.. | Pass | n/a |
+| **As a shopper**, I can **securely complete the checkout process** to **finalize the purchase**. | Yes | Yes | I can securely complete the checkout process to finalize the purchase. | Pass | n/a |
+| **As a shopper**, I can **receive a confirmation email post-purchase** to **verify and maintain a record of the order**. | Yes | Yes | I can receive a confirmation email after making a purchase to verify and maintain a record of the order. | Pass | n/a |
+| **As site user**, I can **utilize the Contact Us form** to **communicate with the business/site admin**. | Yes | Yes | I can use the Contact Us form to communicate with the business or site administrator. | Pass | n/a |
+| **As a shopper**, I can **receive visual feedback during store interactions** to **confirm actions and choices**. | Yes | Yes | I can receive visual feedback during store interactions, which confirms my actions and choices. | Pass | n/a |
+| **As a shopper**, I can **participate in reading and writing product reviews** to **make informed purchase decisions and share experiences with other users**. | Yes | Yes | Users can participate in reading and writing product reviews, enabling them to make informed purchase decisions and share experiences with other users | Pass | n/a |
+| **As a site user**, I can **provide my information through the newsletter form** to **receive emails regarding products**. | Yes | Yes | Users can provide their information through the newsletter form to receive emails regarding products. | Pass | n/a |
+| **As a site admin**, I can **add products to the inventory using a frontend form** to **expand the range/quantity of available products on the site**. | Yes | Yes | Adding products through a frontend form helps broaden the range and quantity of items available on the site's inventory. | Pass | n/a |
+| **As a site admin**, I can **edit existing inventory details through a frontend form** to **modify stock quantities, sizes, colors, or product information**. | Yes | Yes | Editing existing inventory details via a frontend form allows for modifications to stock quantities, sizes, colors, or product information. | Pass | n/a |
+| **As a site admin**, I can **delete products from the inventory using a frontend form** to **remove them from sale**. | Yes | Yes | Deleting products from the inventory via a frontend form allows for their removal from sale | Pass | n/a |
+| **As a public user**, I can **enter login details** to **access the user account securely**. | Yes | Yes | Entering login details enables secure access to the user account. | Pass | n/a |
+| **As a public user**, I can **click on visible links in the footer** to **access relevant information and destinations**. | Yes | Yes | Clicking on visible links in the footer grants access to relevant information and destinations. | Pass | n/a |
+| **As a public user**, I can **select a navbar item for a specific category** to **narrow down the display of related products**. | Yes | Yes | Selecting a navbar item for a specific category filters the display to show related products. |Pass | n/a |
+| **As a public user**, I can **interact with sorting and view features on the 'All Products' page** to **enhance the shopping experience**. | Yes | Yes | Interacting with sorting and view features on the 'All Products' page enhances the shopping experience. | Pass | n/a |
+|  **As a public user**, I can view error pages with 'Home' links for seamless navigation back to the main page in case of missing or forbidden pages. | Yes | Yes | Error pages include 'Home' links for seamless navigation back to the main page in case of missing or forbidden pages. | Pass | n/a |
+|  **As a public user**, I can **register an email and receive a validation link via email to create an account** for **tracking spending and purchases**. | Yes | Yes | Users can register their email and receive a validation link via email to create an account, facilitating the tracking of spending and purchases | Pass | n/a |
+| **As a signed-in user**, I can **click the 'Add to Wishlist' button** to **bookmark favorite items**. | Yes | Yes | Users can click the 'Add to Wishlist' button to bookmark favorite items. | Pass | n/a |
+**As a signed-in user**, I can **click the 'Remove' icon beside Wishlist items** to **eliminate products from the Wishlist**. | Yes | Yes | Users can click the 'Remove' icon beside Wishlist items to eliminate products from the Wishlist. | Pass | n/a |
 
-
-### Dev Tools/Real World Device Testing
-
-Responsiveness testing was carried out using Google Dev Tools on the devices detailed within the below table. Responsiveness was evident on all features throughout all tested devices.
-
-**Dev Tools Device Testing - all features tested, issues noted below**
-| Device  | Feature    | Issue  | Fix  |
-| ------- | ---------- | ------ |------|
-| iPhone 4 | Order History table | Content overflow on y-axis | Separate media query created for screens max-width: 350px to cope with iPhone4 320px screen width, font-size reduced for order history table |
-| iPhone12 Pro | All features | None | None  |
-| Samsung Galaxy S20 | All features | None | None  |
-| iPad Pro | All features | All features | None | None |
-
-**Real World Device Testing**
-| Device      | Feature    | Issue  | Fix  |
-| ------------| ---------- | ------ |------|
-| OPPO Reno 8 Lite |   All features    | No issues | None needed |
-| iPhone XR | All features |  No issues  | None needed |
-| iPhone 12  | All features | No issues | None needed |
-| Samsung Galaxy S21 | All features | No issues | None needed |
-| iPad Pro 2021 |    All features      |    No issues    |  None needed |
-| Acer Aspire 3 2019 laptop | All features | No issues | None needed |
 
 
 ## Bugs
 
-| No. | Bug | Solved | Fix | Solution Credit | Commit no. |
-| --- | ---------------- | ---- | ------------- | -------------- | ------------|
-| 1   | JavaScript dropdown menu fix | Yes | moving the mouseleave function outside of the main code seems to fix the 'dropdown menu randomly not appearing on hover' issue, This did not fix it, 2nd fix was to update to Bootstrap 4.6 and add 'ease' to menu hover transitions. Currently working consistently, 'pb-2' added to'all' fully fixed it | Investigating the CSS myself | e27b7a5/2aab065 |
-| 2   | UnboundLocalError:Local variable 'categories' referenced before assignment & navbar active item styling. 'All' products option not displaying due to category = None when it was necessary for it to be categories. | Yes | Changed to categories = [] to initialize as empty list and added 'not request.GET.category' to 'all' nav-item li tag to remove bold styling when other product categories selected. | Stackoverflow <https://tinyurl.com/26a5ksrd> & CareerKarma <https://tinyurl.com/yc847kb7> | 76e8ef8 |
-| 3   | Checkout form info not saving to Profile/Account form on checkout success. The 'save_info' section of checkout_success did not save the changed user info to the user's profile. | Yes | I considered that I may have caused an issue with my Wishlist app signals/contexts but after debugging there was no issue. Debugging with print statements to the terminal showed that the checkout form data was not being saved. I tried several fixes. First was to clear the site data via Dev Tools->Application->Clear Site Data and restart the server. No positive fix. I then backtracked to some earlier commits and removed the 'full_name' field that I had added to my UserProfile models and changed the '_' in checkout.html name='save_info' to name='save-info'. Tested my code with superuser and created a new user to find the issue resolved and no issue with Wishlist app. | Fix credit -> Gemma from Tutor Support for helping me to confirm my debugging process was correct and the 'Clear SiteData' tip, and a strong coffee for the second pass at spotting and fixing the bug. | 7659ada |
-| 4  | Email Confirmation for order displaying multiple zeros at the end of the totals. | Yes | Fixed with 'floatformat:2' in confirmation_email.txt | Fixed by developer | 5774e14 |
-| 5  | Bag 'Remove' removes all items with same id but different sizes, if I wanted to remove a medium black tshirt and leave the small black tshirt, code was removing both black tshirts. | Yes | Fixed in quantity_update_script, removed `'size':size` and replaced with `'product_size`:size as per the product models. | Fixed by developer | 3115569 |
-| 6 | Sizes not showing in Checkout Success/Order History | Yes | Fixed by changing products.size to products_size | Fixed by developer, typo | b5f04cb |
+| Bug | Solved | Fix | 
+| ---------------- | ---- | ------------- | 
+  | Account email verification getting back with error 500 in the deployed site| Yes | add runtime.txt file | 
+  | Error 401 in stripe | Yes | Changed the workspace public so stripe could get the port 8000 and import stripe in the webhooks.py | 76e8ef8 |
+  | Unable to migrate | Yes | Reset database
+   | 
 
 
 ### Unresolved/Known Bugs
