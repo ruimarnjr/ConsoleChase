@@ -79,7 +79,7 @@ Welcome to Console Chase! We're thrilled to be your premier destination for ever
 * As a shopper, I can **navigate to the 'All Products' view** to **explore the complete product catalog**.
 * As a shopper,  I can **create and manage** an account for storing personal details, order history, and expediting the checkout process.
 * As a shopper, I can **edit personal details on the account** to **ensure they remain current and accurate**.
-* As a shopper, I can select an individual product to access detailed information such as description, price, available colors, and sizes.
+* As a shopper, I can select an individual product to access detailed information such as description, price.
 * As a shopper, I can **click on 'Add to Bag' in the product view** to **include the chosen item in the shopping bag**.
 * As a shopper, I can **adjust quantities or remove products from the shopping bag** for **better control over the purchase**.
 * As a shopper, I can **view the shopping bag total from any page** to **monitor potential spending**.
@@ -418,7 +418,7 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 
 ## Tools & Programs
 - [Image ReSizer](https://www.simpleimageresizer.com/) for reducing image size
-- [Favicon](https://favicon.io/) for converting an icon into a favicon.
+- [Favicon](https://icons8.com) for converting an icon into a favicon.
 - [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Console Chase on different screen sizes.
 - [Mailchimp](https://mailchimp.com/) is used for marketing with their newsletter subscription service.
 
@@ -752,18 +752,11 @@ A copy of the original repository can be made through GitHub. Please follow the 
 
 [Back to Top](#contents)
 
----
-
-## **Testing And Project Barrier Solutions**
-
-All testing and project barriers and solutions has been documented here - [TESTING.md](https://github.com/KonstantinaStrantzali/FreshNow-food-corner/blob/master/TESTING.md)
-
-[Back to Top](#contents)
 
 ---
-
 
 ## **Credits**
+
 
 ### Code
 
