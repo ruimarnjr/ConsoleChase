@@ -108,8 +108,6 @@ Welcome to Console Chase! We're thrilled to be your premier destination for ever
 - As a shopper, I can **apply a discount code, received via email**, to **redeem discounts on purchases**.
 * **USER STORY**: Alert for Product Reviews
 - As a public user, I can **receive notifications** when other users comment on reviews or find them helpful.
-* **USER STORY**: Stay Informed and Connected
-- As a user, I can receive feedback and notifications for my actions to stay informed about the outcomes of my interactions with the platform. PS: Although there isn't a specific section for these discussions, users can interact using the comment section for each game.
 
 You can have access to the full Project page [here](https://github.com/users/ruimarnjr/projects/6/views/1).
 
@@ -173,17 +171,19 @@ Email Newsletter: Implementing an email newsletter subscription feature on the w
 * Home
   * Hero Image
   * List of Categories that lead to the Categorized Products when clicked
-  ![Home](docs/readme_images/hero_image.png)
+![Home](docs/readme_images/hero_image.png)
 
 * Navigation Bar
-   ![Navigation Bar](docs/readme_images/navigation.png)
+![Navigation Bar](docs/readme_images/navigation.png)
 
 * Search Bar
-  * Sort by product name:
-     ![Sort by product name](docs/readme_images//search.png)
+![search_bar](docs/readme_images/search.png)
+
+* Sort by product name:    
+![Sort by product name](docs/readme_images/sort_product.png)
 
 * Shop by Category:
-     ![Shop by Category](docs/readme_images/shop_category.png)
+   ![Shop by Category](docs/readme_images/shop_category.png)
 
 * Newsletter + Contact Us:
      ![Newsletter](docs/readme_images/newsletter.png)
@@ -282,7 +282,8 @@ Email Newsletter: Implementing an email newsletter subscription feature on the w
 
 ### Checkout
 
-Order
+#### Order
+**linked to OrderlineItem & Userprofile**
 * order_number: CharField
 * user_profile: ForeignKey to UserProfile
 * full_name: CharField
@@ -301,15 +302,16 @@ Order
 * original_bag: TextField
 * stripe_pid: CharField
 
-OrderLineItem:
+#### OrderLineItem
+**linked to Product & Order**
 * order: ForeignKey to Order
-* roduct: ForeignKey to Product
+* product: ForeignKey to Product
 * quantity: IntegerField
 * lineitem_total: DecimalField
 
 ### Home
 
-ContactUs
+#### ContactUs
 
 * full_name: CharField 
 * email: CharField 
@@ -318,13 +320,13 @@ ContactUs
 
 ### Products
 
-Category
-
+#### Category
+**linked to Products**
 * name: CharField 
 * friendly_name: CharField 
 
-Product
-
+#### Product
+**linked to Review & Category**
 * category: ForeignKey to Category 
 * sku: CharField 
 * name: CharField 
@@ -333,8 +335,8 @@ Product
 * image_url: URLField 
 * image: ImageField 
 
-Review
-
+#### Review
+**linked to Product & UserProfile**
 * product: ForeignKey to Product 
 * rating: IntegerField 
 * content: TextField
@@ -343,8 +345,8 @@ Review
 
 ### Profiles
 
-User Profile
-
+#### User Profile
+**linked to Wishlist & Order**
 * user: OneToOneField to User 
 * default_phone_number: CharField 
 * default_street_address1: CharField 
@@ -354,8 +356,8 @@ User Profile
 * default_postcode: CharField 
 * default_country: CountryField 
 
-### Wishlist
-
+#### Wishlist
+**linked to Product & UserProfile**
 * profile_user: ForeignKey to UserProfile 
 * product: ForeignKey to Product 
 
@@ -373,7 +375,7 @@ The navigation bar changes depending on user status and screen size:
 | Logo (large screen) | &#9989; | &#9989; | &#9989; |
 | Home | &#9989; | &#9989; | &#9989; |
 |Dropdown list of products categories | &#9989; | &#9989; | &#9989; |
-| About Us | &#9989; | &#9989; | &#9989; |
+| Contact Us | &#9989; | &#9989; | &#9989; |
 | Search Bar | &#9989; | &#9989; | &#9989; |
 | My Account | &#9989; | &#9989; | &#9989; |
 | My Account dropdown - Login | &#9989; | &#10060; | &#10060; |
@@ -411,7 +413,6 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [django-countries](https://pypi.org/project/django-countries/) for country field rendering in checkout form.
 - [django-storages](https://django-storages.readthedocs.io/en/latest/) for handling static and media files.
 - [gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) apure-Python WSGI server for UNIX.
-- [oauthlib](https://pypi.org/project/oauthlib/) OAuth request-signing logic.
 - [psycopg2](https://pypi.org/project/psycopg2/) s PostgreSQL database adapter for Python.
 - [Stripe](https://stripe.com/en-ie) for processing console chase's payment system.
 
@@ -774,6 +775,6 @@ All testing and project barriers and solutions has been documented here - [TESTI
 
 ### Acknowledgements
 
-* Thanks from everyone from Code Institute who have helped me on this journey, it's been a really hard year but it's worth every single headache, bug and etc. I hope this is just a start in my coding career.
-* A very special thanks to my girlfriend Camila Almeida. I honesly have no words for this girl, I'm really lucky to have her by my side. 
+* Thanks to everyone from Code Institute who have helped me on this journey. I'm grateful for every bug and headache because it has led me to where I am today. This is just the beginning of my coding journey.
+* A very special thanks to my girlfriend Camila Almeida, who supported me during the toughest moments and pushed me until the end. I'm really lucky to have her by my side.
 
